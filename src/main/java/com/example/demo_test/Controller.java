@@ -14,11 +14,11 @@ public class Controller {
 
     @GetMapping("/test")
     public String test() {
-        return myService.message(); // Sẽ trả về "Message cố định từ MyService!"
+        return myService.message();
     }
 
     @GetMapping("/another")
     public String anotherTest() {
-        return myService.anotherFixedFunction(); // Sẽ trả về "Đây là một chức năng cố định khác."
+        return myService.anotherFixedFunction();
     }
 }
