@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '3.4.4'
+	id 'io.spring.dependency-management' version '1.1.6'
+	id 'java'
+}
+sourceCompatibility = '21'
+group = 'com.example.demo-test'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+	mavenLocal() // Để tìm artifact trong ~/.m2/repository
+	mavenCentral() // Để tải các dependency khác
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.example:demov1:0.0.1-SNAPSHOT'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+springBoot {
+	mainClass = 'com.example.demo-test.Application' // Lớp chính của dự án mới
+}
